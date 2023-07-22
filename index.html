@@ -33,6 +33,7 @@
           <li class="list-group-item">Item 2</li>
           <li class="list-group-item">Item 3</li>
           <li class="list-group-item">Item 4</li>
+          <li>Item 5</li>
         </ul>
       </div>
     </div>
@@ -40,9 +41,11 @@
       const items = document.querySelectorAll(".list-group-item");
       items[2].style.backgroundColor = "green";
       for (const item of items) {
-        // console.log(item);
         item.style.fontWeight = "bold";
       }
+      const uls = document.getElementsByClassName("list-group");
+      const lis = uls[0].getElementsByTagName("li");
+      console.log(lis[4]);
     </script>
   </body>
 </html>
